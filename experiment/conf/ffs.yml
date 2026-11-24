@@ -1,7 +1,0 @@
-# SOS File Format Service integration, read by project/ffs/header.sh and tailer.sh.
-FFS:
-  URL: http://127.0.0.1:8765
-  MODE: metadata            # basic | metadata | content
-  ON_FAILURE: fail          # fail | warn (warn: checks are only logged, as without the integration)
-  PYTHON: python3           # any python3 on the node; the client uses the standard library only
-  LOG: @REPO@/data/%DEFAULT.EXPID%/ffs_checks.jsonl

@@ -1,0 +1,7 @@
+# Plain Autosubmit: no header or tailer, the files are not validated.
+JOBS:
+  SIM:
+    EXTENDED_TAILER_PATH: ''
+  POST:
+    EXTENDED_HEADER_PATH: ''
+    EXTENDED_TAILER_PATH: ''

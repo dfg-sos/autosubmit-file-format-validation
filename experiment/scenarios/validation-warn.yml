@@ -1,0 +1,3 @@
+# Failed checks are only logged: the workflow behaves as without the integration.
+VALIDATION:
+  ON_FAILURE: warn

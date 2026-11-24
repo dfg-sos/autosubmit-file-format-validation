@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "ontology_uri": "https://dfg-sos.github.io/ontologies/eo-formats#",
+  "description": "Mapping from the SOS EO formats ontology (https://dfg-sos.github.io/ontologies/eo-formats.owl) to the format identifiers of the format-validator EO plugin. experiment/conf/validation.yml passes this directory to format-validator --mappings.",
+  "mappings": {
+    "COG": "COG",
+    "DEM": "DEM",
+    "DSM": "DSM",
+    "DTM": "DTM",
+    "GeoJSON": "GeoJSON",
+    "GeoPackage": "GeoPackage",
+    "GeoParquet": "GeoParquet",
+    "GeoTIFF": "GeoTIFF",
+    "GML": "GML",
+    "GPX": "GPX",
+    "GRIB": "GRIB",
+    "KML": "KML",
+    "NetCDF_CF": "NetCDF",
+    "Shapefile": "Shapefile",
+    "WKT": "WKT",
+    "GIS": "GIS",
+    "Raster": "GISRaster",
+    "Vector": "GISVector"
+  }
+}

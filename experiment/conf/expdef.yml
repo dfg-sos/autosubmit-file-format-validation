@@ -12,7 +12,7 @@ EXPERIMENT:
   CALENDAR: standard
 PROJECT:
   PROJECT_TYPE: local       # not "none": Autosubmit drops extended headers/tailers in dummy projects
-  PROJECT_DESTINATION: 'ffs-poc'
+  PROJECT_DESTINATION: 'format-validation-poc'
 LOCAL:
   PROJECT_PATH: '@REPO@/project'
 RERUN:

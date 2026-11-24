@@ -1,0 +1,8 @@
+# Format validation with the format-validator CLI, read by project/validation/header.sh and tailer.sh.
+VALIDATION:
+  VALIDATOR: @REPO@/envs/validator/bin/format-validator   # installed by scripts/setup.sh
+  MAPPINGS: @REPO@/mappings # ontology IRI -> format identifier mappings (*.json)
+  MODE: metadata            # basic | metadata | content
+  ON_FAILURE: fail          # fail | warn (warn: checks are only logged, as without the integration)
+  PYTHON: python3           # any python3 on the node; validate_files.py uses the standard library only
+  LOG: @REPO@/data/%DEFAULT.EXPID%/validation.jsonl

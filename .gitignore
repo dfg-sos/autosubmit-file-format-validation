@@ -1,4 +1,4 @@
-# Created by scripts/setup.sh, scripts/start-ffs.sh and scripts/run-scenario.sh (machine-specific paths)
+# Created by scripts/setup.sh and scripts/run-scenario.sh (machine-specific paths)
 envs/
 autosubmit/
 data/

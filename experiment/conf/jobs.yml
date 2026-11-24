@@ -1,6 +1,6 @@
 # A toy climate chain: SIM writes one NetCDF file per chunk, POST averages it.
-# FFS_INPUTS / FFS_OUTPUTS (custom keys) declare the files each job reads and writes, with the
-# IRI of the format they must have; project/ffs/header.sh and tailer.sh check them.
+# VALIDATE_INPUTS / VALIDATE_OUTPUTS (custom keys) declare the files each job reads and writes, with the
+# IRI of the format they must have; project/validation/header.sh and tailer.sh check them.
 JOBS:
   SIM:
     FILE: templates/sim.sh
@@ -8,8 +8,8 @@ JOBS:
     RUNNING: chunk
     DEPENDENCIES: SIM-1
     WALLCLOCK: 00:05
-    EXTENDED_TAILER_PATH: ffs/tailer.sh
-    FFS_OUTPUTS:
+    EXTENDED_TAILER_PATH: validation/tailer.sh
+    VALIDATE_OUTPUTS:
       SIM_OUT:
         FORMAT: "https://dfg-sos.github.io/ontologies/eo-formats#NetCDF_CF"
         PATH: "%TOY.DATA_DIR%/%SDATE%/%MEMBER%/sim_%CHUNK%.nc"
@@ -19,13 +19,13 @@ JOBS:
     RUNNING: chunk
     DEPENDENCIES: SIM
     WALLCLOCK: 00:05
-    EXTENDED_HEADER_PATH: ffs/header.sh
-    EXTENDED_TAILER_PATH: ffs/tailer.sh
-    FFS_INPUTS:
+    EXTENDED_HEADER_PATH: validation/header.sh
+    EXTENDED_TAILER_PATH: validation/tailer.sh
+    VALIDATE_INPUTS:
       SIM_OUT:
         FORMAT: "https://dfg-sos.github.io/ontologies/eo-formats#NetCDF_CF"
         PATH: "%TOY.DATA_DIR%/%SDATE%/%MEMBER%/sim_%CHUNK%.nc"
-    FFS_OUTPUTS:
+    VALIDATE_OUTPUTS:
       TIME_MEAN:
         FORMAT: "https://dfg-sos.github.io/ontologies/eo-formats#NetCDF_CF"
         PATH: "%TOY.DATA_DIR%/%SDATE%/%MEMBER%/post_%CHUNK%.nc"

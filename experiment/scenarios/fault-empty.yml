@@ -1,0 +1,4 @@
+# SIM writes a file without data variables in chunk 2.
+TOY:
+  FAULT:
+    KIND: empty

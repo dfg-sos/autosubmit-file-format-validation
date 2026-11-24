@@ -1,0 +1,4 @@
+# SIM writes a truncated (corrupt) file in chunk 2.
+TOY:
+  FAULT:
+    KIND: truncate
